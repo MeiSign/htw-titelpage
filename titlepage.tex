@@ -1,0 +1,88 @@
+\documentclass[12pt,a4paper]{report}
+
+\usepackage{graphicx}
+\usepackage{background}
+\usepackage[textwidth=12cm, textheight=220mm]{geometry}
+
+% Farben
+\definecolor{htwgrau}{RGB}{175, 175, 175}
+
+% Hintergrund (Linie und Icons)
+\SetBgScale{1}
+\SetBgColor{htwgrau}
+\SetBgAngle{0}
+\SetBgHshift{-0.58\textwidth}
+\SetBgContents{
+  \includegraphics[height=1.1\textheight]{logos.png}
+	\rule{0.5pt}{1.1\textheight}
+}
+
+% extra margin command
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist 
+
+\begin{document}
+  \begin{titlepage}
+
+		% Logo
+    \includegraphics[width=0.50\textwidth]{HTW_Logo_quer_rgb.jpg}
+
+		% Abstand nach logo
+	  \vspace{4.0cm}
+
+		% Textkörper
+    \begin{changemargin}{0.5cm}{0.0cm} 		
+			% Dokumenttyp
+			\color{htwgrau}
+			\normalsize
+			\textsf{\noindent\MakeUppercase{Dokumentyp}} \vspace{-20pt}\\
+			% Horizontale Linie
+			\noindent\rule{\textwidth}{0.5pt}\vspace{-4pt}		
+			% Title
+			\color{black}
+			\huge
+			\textsf{Dies ist ein toller Titel}
+			\vspace{12pt}
+			
+			% Author
+			\color{htwgrau}
+			\normalsize
+			\textsf{\MakeUppercase{Author}}
+			
+			\color{black}
+			\large
+			\textsf{Max Mustermann}
+			
+			% Datum
+			\color{htwgrau}
+			\normalsize
+			\textsf{\MakeUppercase{Datum}}
+			
+			\color{black}
+			\large
+			\textsf{17.01.2016}
+
+			% Am Ende der Seite
+			\vfill
+
+			% Kurs
+			\color{htwgrau}
+			\normalsize
+			\textsf{\MakeUppercase{Kurs}}
+			
+			\color{black}
+			\large
+			\textsf{Schreiben mit Latex I}
+			
+			% Dozent
+			\color{htwgrau}
+			\normalsize
+			\textsf{\MakeUppercase{Dozent}}
+			
+			\color{black}
+			\large
+			\textsf{Prof. Dr. Schmidt}
+			\vspace{-60pt}
+		\end{changemargin} 		
+	\end{titlepage}
+\end{document}
